@@ -63,6 +63,72 @@ namespace TriangleSolver.Tests
             Assert.That(result, Is.EqualTo("A triangle is formed and it is an ISOSCELES"));
         }
 
+        // Valid Scalene Triangles
+        [Test]
+        public void AnalyzeTriangle_ValidScalene1_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 3, secondSide = 4, thirdSide = 5;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
+            
+
+        [Test]
+        public void AnalyzeTriangle_ValidScalene2_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 5, secondSide = 6, thirdSide = 7;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
+            
+        }
+
+        [Test]
+        public void AnalyzeTriangle_ValidScalene3_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 8, secondSide = 15, thirdSide = 17;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
+        }
+
+        [Test]
+        public void AnalyzeTriangle_ValidScalene4_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 7, secondSide = 24, thirdSide = 25;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
+        }
+
+        [Test]
+        public void AnalyzeTriangle_ValidScalene5_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 9, secondSide = 40, thirdSide = 41;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
+        }
 
 
 

@@ -5,9 +5,8 @@ namespace TriangleSolver.Tests
 {
     [TestFixture]
     public class TriangleTestings
-
     {
-        // One Valid Equilateral Triangle ~ Testing
+        // Valid Equilateral Triangle ~ Testing
 
         [Test]
         public void Is_Equilateral()
@@ -22,7 +21,7 @@ namespace TriangleSolver.Tests
             Assert.That(result, Is.EqualTo("A triangle is formed and it is an EQUILATERAL"));
         }
 
-        // Three Valid Isosceles Triangle ~ Testing
+        // Valid Isosceles Triangles ~ Testing
 
         [Test]
         public void Is_Isosceles1()
@@ -41,7 +40,7 @@ namespace TriangleSolver.Tests
         public void Is_Isosceles2()
         {
             // Arrange
-            int firstSide = 7, secondSide =7, thirdSide = 6;
+            int firstSide = 7, secondSide = 7, thirdSide = 6;
 
             // Act
             string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
@@ -63,7 +62,8 @@ namespace TriangleSolver.Tests
             Assert.That(result, Is.EqualTo("A triangle is formed and it is an ISOSCELES"));
         }
 
-        // Valid Scalene Triangles
+        // Valid Scalene Triangles ~ Testing
+
         [Test]
         public void AnalyzeTriangle_ValidScalene1_ReturnsScalene()
         {
@@ -75,7 +75,7 @@ namespace TriangleSolver.Tests
 
             // Assert
             Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
-            
+        }
 
         [Test]
         public void AnalyzeTriangle_ValidScalene2_ReturnsScalene()
@@ -88,7 +88,6 @@ namespace TriangleSolver.Tests
 
             // Assert
             Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
-            
         }
 
         [Test]
@@ -130,8 +129,46 @@ namespace TriangleSolver.Tests
             Assert.That(result, Is.EqualTo("A triangle is formed and it is a SCALENE"));
         }
 
+        // Valid Zero Length Sides ~ Testing
+
+        [Test]
+        public void CheckTriangle_OneSideZero_ReturnInvalid()
+        {
+            // Arrange
+            int firstSide = 0, secondSide = 5, thirdSide = 6;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("INVALID triangle - a zero was entered"));
+        }
+
+        [Test]
+        public void CheckTriangle_TwoSidesZero_ReturnInvalid()
+        {
+            // Arrange
+            int firstSide = 0, secondSide = 0, thirdSide = 5;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("INVALID triangle - a zero was entered"));
+        }
 
 
+        [Test]
+        public void CheckTriangle_ThreeSidesZero_ReturnInvalid()
+        {
+            // Arrange
+            int firstSide = 0, secondSide = 0, thirdSide = 0;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("INVALID triangle - a zero was entered"));
+        }
     }
 }
-

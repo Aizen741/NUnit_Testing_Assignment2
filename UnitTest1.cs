@@ -9,7 +9,7 @@ namespace TriangleSolver.Tests
         // Valid Equilateral Triangle ~ Testing
 
         [Test]
-        public void Is_Equilateral()
+        public void CheckTriangle_ValidEquilateral_ReturnEquilateral()
         {
             // Arrange
             int firstSide = 4, secondSide = 4, thirdSide = 4;
@@ -24,7 +24,7 @@ namespace TriangleSolver.Tests
         // Valid Isosceles Triangles ~ Testing
 
         [Test]
-        public void Is_Isosceles1()
+        public void CheckTriangle_ValidIsosceles_ReturnIsosceles1()
         {
             // Arrange
             int firstSide = 6, secondSide = 7, thirdSide = 7;
@@ -37,7 +37,7 @@ namespace TriangleSolver.Tests
         }
 
         [Test]
-        public void Is_Isosceles2()
+        public void CheckTriangle_ValidIsosceles_ReturnIsosceles2()
         {
             // Arrange
             int firstSide = 7, secondSide = 7, thirdSide = 6;
@@ -50,7 +50,7 @@ namespace TriangleSolver.Tests
         }
 
         [Test]
-        public void Is_Isosceles3()
+        public void CheckTriangle_ValidIsosceles_ReturnIsosceles3()
         {
             // Arrange
             int firstSide = 7, secondSide = 6, thirdSide = 7;

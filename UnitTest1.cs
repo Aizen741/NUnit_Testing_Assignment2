@@ -170,5 +170,50 @@ namespace TriangleSolver.Tests
             // Assert
             Assert.That(result, Is.EqualTo("INVALID triangle - a zero was entered"));
         }
+
+
+        // Invalid Triangles (not related to zero length)
+        [Test]
+        public void AnalyzeTriangle_InvalidTriangle1_ReturnsNotFormed()
+        {
+            // Arrange
+            int firstSide = 1, secondSide = 2, thirdSide = 3;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is not formed based on the input values"));
+            
+        }
+
+        [Test]
+        public void AnalyzeTriangle_InvalidTriangle2_ReturnsNotFormed()
+        {
+            // Arrange
+            int firstSide = 10, secondSide = 2, thirdSide = 3;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+
+            Assert.That(result, Is.EqualTo("A triangle is not formed based on the input values"));
+        }
+
+        [Test]
+        public void AnalyzeTriangle_InvalidTriangle3_ReturnsNotFormed()
+        {
+            // Arrange
+            int firstSide = 3, secondSide = 5, thirdSide = 9;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("A triangle is not formed based on the input values"));
+        }
+    
+
     }
 }
